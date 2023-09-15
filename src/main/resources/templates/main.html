@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>main</title>
+</head>
+<body>
+    <h1>view resolver 테스트</h1>
+    <!-- 문자열 뷰 반환이 좀 더 보편적이다. -->
+
+    <h3>문자열로 뷰 이름 반환하기</h3>
+    <button onclick="location.href='string'">문자열로 뷰 이름 반환</button>
+
+    <h3>문자열로 redirect하기</h3>
+    <button onclick="location.href='string-redirect'">문자열로 redirect</button>
+
+    <h3>문자열로 redirect & flashAttribute 추가하기</h3> <!-- check -->
+    <button onclick="location.href='redirect-attr'">문자열로 redirect & flashAttribute 추가</button>
+
+    <script>
+        const flashMessage1 = '[[${ flashMessage1 }]]';
+        console.log(flashMessage1);
+        if(flashMessage1) alert(flashMessage1);
+    </script>
+
+    <!-- ModelAndView 로 바꿔보기 -->
+    <h3>ModelAndView 뷰 이름 반환하기</h3>
+    <button onclick="location.href='modelandview'">ModelAndView로 뷰 이름 반환</button>
+
+    <h3>ModelAndView로 redirect하기</h3>
+    <button onclick="location.href='modelandview-redirect'">ModelAndView로 redirect</button>
+
+    <h3>ModelAndView로 redirect & flashAttribute 추가하기</h3>
+    <button onclick="location.href='modelandview-redirect-attr'">ModelAndView로 redirect & flashAttribute 추가</button>
+
+    <script>
+        const flashMessage2 = '[[${ flashMessage2 }]]';
+        console.log(flashMessage2);
+        if(flashMessage2) alert(flashMessage2);
+    </script>
+
+</body>
+</html>
